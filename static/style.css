@@ -1,0 +1,225 @@
+* { margin: 0px; padding: 0px; }
+body {
+	background: #f0f1f2;
+	font:12px "Open Sans", sans-serif; 
+}
+
+p.italic{
+	font-style: italic;
+}
+
+#view-code{
+  color:#89a2b5;    
+  opacity:0.7;
+  font-size:14px;
+  text-transform:uppercase;
+  font-weight:700;
+  text-decoration:none;
+  position:absolute;top:660px;
+  left:50%;margin-left:-50px;
+  z-index:200;
+}
+#view-code:hover{opacity:1;}
+#chatbox{
+	width:500px;
+	background:#fff;
+	border-radius:6px;
+	height: calc(90% - 50px);
+	position:absolute;
+	top:50px;
+	left:50%;
+	margin-left:-260px;
+	min-height: 450px;
+	max-height: 90%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#topmenu h3{
+	padding:0px;
+	padding-top:10px;
+	font-size:20px;
+	color: white;
+	margin-bottom:5px;
+}
+#topmenu p{
+	margin-top:20px;
+	font-size: 1.1em;
+}
+#topmenu{
+	padding: 35px;
+	height: auto;
+	background: url("chatbot_cover2.jpg") 0 0 no-repeat;
+	background-size: 100% auto;
+	width:430px;
+	border-bottom:1px solid #d8dfe3;
+	top: 0;
+	margin: 0;	
+}
+#topmenu span{
+	float:left;	
+	width: 96px;
+    height: 70px;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/top-menu.png") -3px -118px no-repeat;
+}
+#topmenu i{
+	font-size: 20px;
+}
+#topmenu a{
+	color: #fff;
+	text-decoration: none;
+}
+#topmenu span.friends{margin-bottom:-1px;}
+#topmenu span.chats{background-position:-95px 25px; cursor:pointer;}
+#topmenu span.chats:hover{background-position:-95px -46px; cursor:pointer;}
+#topmenu span.history{background-position:-190px 24px; cursor:pointer;}
+#topmenu span.history:hover{background-position:-190px -47px; cursor:pointer;}
+
+form {
+	padding-top:25px;
+}
+
+div#friends{
+	padding: 35px;
+}
+
+.friend{
+	height:80px;
+	border-bottom:1px solid #e7ebee;		
+	position:relative;
+}
+.friend:hover{
+	background:#f1f4f6;
+	cursor:pointer;
+}
+.friend img{
+	width:50px;
+	border-radius:50%;
+	margin:15px;
+	float:left;
+}
+.floatingImg{
+	width:50px;
+	border-radius:50%;
+	position:absolute;
+	top:0;
+	left:12px;
+	border:3px solid #fff;
+	-webkit-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	   -moz-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	    -ms-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	     -o-transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+	        transition: all 200ms cubic-bezier(0.000, 0.995, 0.990, 1.000);	
+}
+
+.floatingImg.animate{
+	top: 20px;
+	left: 197px;
+	width: 100px;
+}
+.floatingImg.done{
+	visibility: hidden;
+}
+.friend p{
+	padding:20px 0 0 0;			
+	float:left;
+	max-width:350px;
+}
+.friend p strong{
+  font-weight:600;
+  font-size:15px;
+	color:#597a96;  
+
+}
+.friend p span{
+	font-size:13px;
+	font-weight:400;
+	color:#aab8c2;
+}
+.friend .status{
+	background:#26c281;
+	border-radius:50%;	
+	width:9px;
+	height:9px;
+	position:absolute;
+	top:35px;
+	right:28px;
+}
+.friend .status.away{background:#ffce54;}
+.friend .status.inactive{background:#eaeef0;}
+#search{
+	background:#e3e9ed url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/search.png") -11px 0 no-repeat;
+	height:60px;
+	width:500px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+#searchfield{
+	background:#e3e9ed;
+	margin:21px 0 0 55px;
+	border:none;
+	padding:0;
+	font-size:14px;
+	font-family:"Open Sans", sans-serif; 
+	font-weight:400px;
+	color:#8198ac;
+}
+#searchfield:focus{
+	 outline: 0;
+}
+.inputfile{
+			width: 0.1px;
+			height: 0.1px;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			z-index: -1;
+		}
+		.inputfile + label {
+		    font-size: 1em;
+		    font-weight: 400;
+		    color: white;
+		    background-color: black;
+		    display: inline-block;
+		    padding: 8px;
+		    border-radius:5px;
+		    min-width: 100px;
+		}
+
+		.inputfile:focus + label,
+		.inputfile + label:hover {
+		    background-color: rgb(0,212,255);
+		}
+		.inputfile + label {
+			cursor: pointer; /* "hand" cursor */
+		}
+		.inputfile:focus + label {
+			outline: 1px dotted #000;
+			outline: -webkit-focus-ring-color auto 5px;
+		}
+		#submit{
+			display: block;
+		}
+		label {
+			color: black;
+			display: block;
+			padding: 10px;
+		}
+		label a{
+			text-decoration: none;
+			color: black;
+		}
+		#submitlabel {
+			cursor: pointer;
+			color: black;
+			width:200px;
+			margin-top:10px;
+		}
+		#filelabel {
+			-webkit-transition: min-width 0.8s;
+			transition: min-width 0.8s;
+		}
+		.expand#filelabel{
+			min-width: 380px;
+			cursor: auto;
+		}
