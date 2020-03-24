@@ -13,8 +13,8 @@ Although this implementation relies heavily on AWS cloud computing services, but
 2. Lambda function returns temporary credentials
 3. Upload media file to S3 Bucket
 4. Upload triggers a lambda function, run.py
-5. Lambda function extracts audio binary and connects to Google Cloud
-6. Lambda writes result to S3 bucket
+5. Extracts audio binary and connects to Google Cloud
+6. Writes result to S3 bucket
 7. Data transmitted back to Client browser
 
 In my experiment, all of the above can be done within 3 seconds, if the audio clip is short and the internet connection is quick.
