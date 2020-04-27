@@ -1,5 +1,7 @@
 # Serverless-cloud-transcription
 
+Using cloud computing services, many processes that traditionally require a server can be done using Pay-as-you-go solutions like AWS.
+
 This is a proof-of-concept prototype to demonstrate how audio transcription service is possible on the cloud, without use of any static server.<br/><br/>
 Although this implementation relies heavily on AWS cloud computing services, but using other cloud computing tools, like Google Firebase, is also possible. AWS S3 is used for hosting, lambda functions for file uploading, processing and transcription, as well as Dynamo for file logging.
 <br/><br/>
